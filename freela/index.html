@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>Saborite Freela | Gestão Inteligente de Freelancers para Restaurantes</title>
+    <meta name="description" content="Automatize a gestão de freelancers no seu restaurante. Agendamento, WhatsApp automático, controle de diárias e pagamentos. Chega de planilha! A partir de R$ 29/mês.">
+    <meta name="keywords" content="gestão freelancers gastronomia, controle freelancers restaurante, sistema de diárias, freelancer chef, automação whatsapp restaurante">
+    <meta name="author" content="Saborite">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saborite.com.br/freela/">
+    <meta property="og:title" content="Saborite Freela | Gestão de Freelancers para Restaurantes">
+    <meta property="og:description" content="Automatize contratação de freelancers, controle diárias e pagamentos. Chega de planilha caótica!">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Saborite Freela | Gestão de Freelancers">
+    <meta name="twitter:description" content="Sistema completo de gestão de freelancers para restaurantes. A partir de R$ 29/mês.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #24475B 0%, #2D5A72 100%);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo img {
+            height: 50px;
+            width: auto;
+            filter: brightness(1.1);
+        }
+        
+        .login-btn {
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .login-btn:hover {
+            background: #fff;
+            color: #24475B;
+            transform: translateY(-2px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #24475B 0%, #62C4CD 100%);
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero .subtitle {
+            font-size: 26px;
+            margin-bottom: 15px;
+            opacity: 0.95;
+            font-weight: 600;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Problem Section */
+        .problem {
+            padding: 60px 20px;
+            background: #F0F8FA;
+            text-align: center;
+        }
+        
+        .problem h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #24475B;
+        }
+        
+        .problem-list {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: left;
+            font-size: 18px;
+            line-height: 2;
+        }
+        
+        .problem-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .problem-list li:before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Solution Section */
+        .solution {
+            padding: 60px 20px;
+            text-align: center;
+            background: #E6F8FA;
+        }
+        
+        .solution h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #1B8A96;
+        }
+        
+        .solution-intro {
+            font-size: 22px;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-weight: 600;
+            color: #24475B;
+        }
+        
+        /* Benefits */
+        .benefits {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+        
+        .benefits h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #24475B;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .benefit-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .benefit-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #24475B;
+        }
+        
+        .benefit-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        /* How it Works */
+        .how-it-works {
+            padding: 80px 20px;
+            background: #fff;
+        }
+        
+        .how-it-works h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #24475B;
+        }
+        
+        .steps {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            gap: 30px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: start;
+            gap: 20px;
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 15px;
+        }
+        
+        .step-number {
+            min-width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #24475B, #2D5A72);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .step-content h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        
+        /* Pricing */
+        .pricing {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+        
+        .pricing h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #24475B;
+        }
+        
+        /* Toggle Mensal/Anual */
+        .billing-toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .billing-toggle span {
+            font-size: 18px;
+            font-weight: 600;
+            color: #666;
+            transition: color 0.3s;
+        }
+        
+        .billing-toggle span.active {
+            color: #24475B;
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: #ccc;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .toggle-switch.active {
+            background: #62C4CD;
+        }
+        
+        .toggle-switch::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            border-radius: 50%;
+            top: 3px;
+            left: 3px;
+            transition: transform 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        .toggle-switch.active::before {
+            transform: translateX(30px);
+        }
+        
+        .discount-badge-toggle {
+            background: linear-gradient(135deg, #62C4CD, #1B8A96);
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .plan-tag {
+            background: #666;
+            color: #fff;
+            padding: 8px 24px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .plan-tag.solo {
+            background: #62C4CD;
+        }
+        
+        .plan-tag.equipe {
+            background: #1B8A96;
+        }
+        
+        .plan-tag.empresarial {
+            background: #24475B;
+        }
+        
+        .pricing-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 40px 35px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #62C4CD;
+            transform: scale(1.05);
+        }
+        
+        .badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: linear-gradient(135deg, #62C4CD, #1B8A96);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        
+        .plan-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .plan-price {
+            font-size: 56px;
+            font-weight: 700;
+            color: #62C4CD;
+            margin-bottom: 10px;
+        }
+        
+        .plan-price sup {
+            font-size: 28px;
+            vertical-align: super;
+        }
+        
+        .plan-period {
+            font-size: 17px;
+            color: #666;
+            margin-bottom: 18px;
+            line-height: 1.4;
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 6px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .payment-badge {
+            background: #f0f0f0;
+            color: #666;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .payment-badge.active {
+            background: #E8F5E9;
+            color: #2E7D32;
+            border: 1px solid #A5D6A7;
+        }
+        
+        .pix-icon {
+            color: #32BCAD;
+            font-weight: bold;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: left;
+            flex-grow: 1;
+        }
+        
+        .plan-features li {
+            padding: 13px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+        
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .plan-features li:before {
+            content: "✓ ";
+            color: #4CAF50;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        
+        /* AI Assistant Addon Checkbox */
+        .ai-addon-option {
+            background: #E6F8FA;
+            border: 2px solid #62C4CD;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            margin-top: auto;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .ai-addon-option:hover {
+            background: #D0F2F4;
+            transform: translateY(-2px);
+        }
+        
+        .ai-addon-option input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        .ai-addon-option label {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 15px;
+        }
+        
+        .ai-addon-option strong {
+            color: #1B8A96;
+        }
+        
+        .ai-addon-icon {
+            font-size: 24px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #62C4CD, #1B8A96);
+            color: #fff;
+            padding: 16px 45px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 17px;
+            display: inline-block;
+            transition: all 0.3s;
+            box-shadow: 0 6px 20px rgba(98,196,205,0.3);
+            margin-top: auto;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(98,196,205,0.5);
+            background: linear-gradient(135deg, #1B8A96, #62C4CD);
+        }
+        
+        /* Extras/Add-ons */
+        .extras {
+            padding: 80px 20px;
+            background: #fff;
+        }
+        
+        .extras h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #24475B;
+        }
+        
+        .extras-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .addon-card {
+            max-width: 650px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #E6F8FA 0%, #fff 100%);
+            border: 3px solid #62C4CD;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(98,196,205,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .addon-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: linear-gradient(135deg, #1B8A96, #62C4CD);
+            color: #fff;
+            padding: 8px 50px;
+            transform: rotate(45deg);
+            font-weight: 700;
+            font-size: 13px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .addon-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .addon-icon {
+            font-size: 64px;
+            line-height: 1;
+        }
+        
+        .addon-title {
+            flex: 1;
+        }
+        
+        .addon-title h3 {
+            font-size: 28px;
+            margin-bottom: 5px;
+            color: #24475B;
+        }
+        
+        .addon-price {
+            font-size: 36px;
+            font-weight: 700;
+            color: #62C4CD;
+        }
+        
+        .addon-price sup {
+            font-size: 18px;
+            vertical-align: super;
+        }
+        
+        .addon-price-period {
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .addon-description {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        
+        .addon-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .addon-features li {
+            padding: 12px 0;
+            font-size: 16px;
+            display: flex;
+            align-items: start;
+            gap: 10px;
+        }
+        
+        .addon-features li:before {
+            content: "🤖";
+            font-size: 20px;
+            min-width: 30px;
+        }
+        
+        .addon-cta {
+            text-align: center;
+        }
+        
+        .addon-note {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 80px 20px;
+            background: #f9f9f9;
+        }
+        
+        .faq h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            color: #24475B;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: #f9f9f9;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #fff;
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 300px;
+        }
+        
+        .faq-toggle {
+            font-size: 24px;
+            color: #24475B;
+            transition: transform 0.3s;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+        
+        /* Footer */
+        footer {
+            background: #222;
+            color: #fff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #62C4CD;
+            text-decoration: none;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero .subtitle {
+                font-size: 20px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .plan-price {
+                font-size: 42px;
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="/" class="logo">
+                <img src="logo.png" alt="Saborite Logo">
+                Saborite Freela
+            </a>
+            <a href="https://freela.saborite.com.br/" target="_blank" class="login-btn">Já sou cliente →</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Chega de Planilha Caótica!</h1>
+            <p class="subtitle">Gestão Inteligente de Freelancers para Restaurantes, Lanchonetes e Buffets</p>
+            <p>Automatize a contratação, envie convites via WhatsApp, controle diárias e pagamentos. Relatórios prontos para a contabilidade.</p>
+        </div>
+    </section>
+
+    <!-- Problem -->
+    <section class="problem">
+        <div class="container">
+            <h2>Você está cansado de...</h2>
+            <ul class="problem-list">
+                <li>Ficar ligando/mandando WhatsApp manual para cada freelancer?</li>
+                <li>Perder tempo com planilhas desorganizadas de controle de diárias?</li>
+                <li>Não saber quem está disponível para trabalhar no fim de semana?</li>
+                <li>Freelancer confirmar e não aparecer na hora H?</li>
+                <li>Fazer relatórios manualmente para enviar à contabilidade?</li>
+                <li>Perder dinheiro com pagamentos atrasados ou calculados errado?</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section class="solution">
+        <div class="container">
+            <h2>A Solução que Você Precisava!</h2>
+            <p class="solution-intro">O Saborite Freela automatiza TUDO: do primeiro contato ao pagamento final. Simples, rápido e profissional.</p>
+        </div>
+    </section>
+
+    <!-- How it Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>Como Funciona na Prática</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Cadastre seus Freelancers</h3>
+                        <p>Organize por funções: chefs, auxiliares, garçons, copeiros, etc. Adicione competências e setores.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Crie um Evento ou Necessidade</h3>
+                        <p>Ex: "Preciso 2 garçons para sábado, das 18h às 23h". O sistema calcula as diárias automaticamente.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Sistema Envia Convite por WhatsApp</h3>
+                        <p>Freelancers disponíveis recebem mensagem automática. Confirmar = 1 clique. Sem ligações, sem esperar resposta.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Gerencie Confirmados, Standby e Lista de Espera</h3>
+                        <p><strong>🛫 Standby (Sobreaviso):</strong> Como na aviação, seu negócio não pode parar! Combine um percentual (geralmente 10-30% da diária) e o freelancer fica em casa, à disposição para assumir em até 1 hora. Se o movimento aumentar ou alguém faltar, você aciona com 1 clique!</p>
+                        <p><strong>📋 Fila de Espera:</strong> Pague um percentual menor (geralmente 2% da diária) para ter freelancers na retaguarda. Se o standby for acionado, o sistema automaticamente promove alguém da fila para standby.</p>
+                        <p><strong>⚙️ Sistema Automatizado:</strong> Não se preocupe! O sistema controla diárias, sobreaviso e fila de espera. Freelancer faltou? Avise o sistema e ele convoca standby + promove fila automaticamente. Tudo sob controle!</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Aprove Pagamentos e Relate à Contabilidade</h3>
+                        <p>Sistema calcula diárias (semanal/quinzenal/período) e gera ordens de pagamento para <strong>sua aprovação</strong>. Integração PIX disponível após aprovação. Relatórios automáticos para o contador. Avalie o desempenho dos freelancers.</p>
+                        <p style="margin-top: 10px; font-size: 14px; color: #1B8A96;"><strong>🔒 Você mantém o controle:</strong> Todos os pagamentos só ocorrem com aprovação do financeiro!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div class="container">
+            <h2>Principais Recursos</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">📲</div>
+                    <h3>Automação WhatsApp</h3>
+                    <p>Envie convites, receba confirmações e gerencie tudo sem sair do sistema. Chega de ficar mandando mensagem manual!</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Sistema de Standby Inteligente</h3>
+                    <p>Como na aviação: freelancer em sobreaviso (10-30% da diária) fica disponível em casa. Fila de espera (2% da diária) garante backup. Sistema automatiza tudo: se faltar alguém, convoca standby e promove fila. Seu negócio nunca para!</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Controle Financeiro Completo</h3>
+                    <p>Diárias, semanais, quinzenais ou por período. Cálculo automático. Relatórios prontos para a contabilidade.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📅</div>
+                    <h3>Agendamento com Antecedência</h3>
+                    <p>Programe eventos recorrentes (todo sábado, toda sexta) e garanta sua equipe com semanas de antecedência.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⭐</div>
+                    <h3>Avaliação de Freelancers</h3>
+                    <p>Registre o desempenho. Quem é pontual? Quem não apareceu? Tome decisões baseadas em dados.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">👥</div>
+                    <h3>Catálogo por Funções</h3>
+                    <p>Organize por competências: chefs, confeiteiros, garçons, copeiros, auxiliares. Encontre quem precisa em segundos.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">💳</div>
+                    <h3>Pagamento Integrado (PIX)</h3>
+                    <p>Sistema calcula valores, você aprova e paga diretamente via PIX. Controle financeiro total, sem erros, sem dor de cabeça.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Web + Mobile</h3>
+                    <p>Acesse de qualquer lugar: computador, tablet ou celular. Dados sempre sincronizados.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔐</div>
+                    <h3>Níveis de Acesso</h3>
+                    <p>Defina quem pode ver o quê: dono, gerente, administrativo. Controle total sobre permissões.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extras/Add-ons -->
+    <section class="extras">
+        <div class="container">
+            <h2>Potencialize Ainda Mais! 🚀</h2>
+            <p class="extras-subtitle">Adicione recursos extras e transforme sua experiência com o Saborite Freela</p>
+            
+            <div class="addon-card">
+                <div class="addon-badge">🔥 NOVIDADE</div>
+                
+                <div class="addon-header">
+                    <div class="addon-icon">🤖</div>
+                    <div class="addon-title">
+                        <h3>Assistente IA via WhatsApp</h3>
+                        <div class="addon-price"><sup>A partir de R$</sup>9<sup>,90</sup></div>
+                        <div class="addon-price-period">por mês (varia por plano)</div>
+                    </div>
+                </div>
+                
+                <p class="addon-description">
+                    <strong>Controle TODO o sistema pelo WhatsApp com Inteligência Artificial!</strong><br>
+                    Esqueça logins e telas complicadas. Simplesmente converse com o assistente e ele faz tudo por você.
+                </p>
+                
+                <p style="background: #FFF9E6; border-left: 4px solid #62C4CD; padding: 12px; border-radius: 5px; margin-bottom: 20px; font-size: 15px;">
+                    <strong>💡 Preço por plano:</strong> Solo (+R$ 9,90/mês) | Equipe (+R$ 19,90/mês) | Empresarial (+R$ 29,90/mês)<br>
+                    <em style="font-size: 13px; color: #666;">O valor varia conforme o uso e volume de chamadas de API</em>
+                </p>
+                
+                <ul class="addon-features">
+                    <li><strong>"Preciso de 2 garçons para sábado"</strong> → Sistema cria evento + envia convites automaticamente</li>
+                    <li><strong>"Quem está confirmado para hoje?"</strong> → Lista completa na hora</li>
+                    <li><strong>"Quanto gastei com freelancers esse mês?"</strong> → Relatório instantâneo</li>
+                    <li><strong>"Pague João da Silva"</strong> → Gera ordem de pagamento para sua aprovação</li>
+                    <li><strong>"Me manda o relatório para o contador"</strong> → PDF gerado e enviado</li>
+                    <li><strong>Linguagem natural:</strong> Fale como se fosse com um colaborador</li>
+                    <li><strong>Disponível 24/7:</strong> Assistente nunca dorme, você gerencia a qualquer hora</li>
+                    <li><strong>Integração total:</strong> Acesso a TODOS os recursos do sistema via chat</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+        <div class="container">
+            <h2>Escolha o Plano Ideal para Você</h2>
+            
+            <!-- Toggle Mensal/Anual -->
+            <div class="billing-toggle">
+                <span id="monthly-label">Planos Mensais</span>
+                <div class="toggle-switch active" id="billing-toggle">
+                    <span class="toggle-slider"></span>
+                </div>
+                <span id="annual-label" class="active">Planos Anuais</span>
+                <span class="discount-badge-toggle">Economize 14%</span>
+            </div>
+            
+            <div class="pricing-cards">
+                <!-- Plano Solo -->
+                <div class="pricing-card">
+                    <span class="plan-tag solo">SOLO</span>
+                    <div class="plan-name">Pequeno Comércio</div>
+                    <div class="plan-price" data-monthly="29" data-annual="299">
+                        <sup>R$</sup><span class="price-value">29</span>
+                    </div>
+                    <div class="plan-period">
+                        <span class="monthly-period">por mês</span>
+                        <span class="annual-period" style="display:none;">por ano (R$ 24,92/mês)</span>
+                    </div>
+                    <div class="payment-methods">
+                        <span class="payment-badge active monthly-payment">💳 Cartão</span>
+                        <span class="payment-badge active annual-payment" style="display:none;">💳 Cartão</span>
+                        <span class="payment-badge active annual-payment" style="display:none;">📄 Boleto</span>
+                        <span class="payment-badge active annual-payment" style="display:none;">💠 <span class="pix-icon">PIX</span></span>
+                    </div>
+                    <p style="margin: 15px 0; color: #666; font-size: 14px;"><strong>1 usuário</strong> | Ideal para começar</p>
+                    <ul class="plan-features">
+                        <li>Freelancers ilimitados</li>
+                        <li>Eventos/agendamentos ilimitados</li>
+                        <li>Automação WhatsApp</li>
+                        <li>Sistema de standby e lista de espera</li>
+                        <li>Controle financeiro completo</li>
+                        <li>Relatórios para contabilidade</li>
+                        <li>Avaliação de freelancers</li>
+                        <li>Acesso web e mobile</li>
+                        <li>Suporte por e-mail</li>
+                    </ul>
+                    
+                    <div class="ai-addon-option">
+                        <label>
+                            <input type="checkbox" class="ai-addon-checkbox" data-plan="solo" data-price="9.90">
+                            <span class="ai-addon-icon">🤖</span>
+                            <span>Adicionar <strong>Assistente IA</strong> (+R$ 9,90/mês)</span>
+                        </label>
+                    </div>
+                    
+                    <a href="https://www.asaas.com/c/sub_2groe4hfqsne5y56" class="cta-button plan-cta-solo" target="_blank">Assinar Agora</a>
+                </div>
+
+                <!-- Plano Equipe (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="badge">⭐ RECOMENDADO</div>
+                    <span class="plan-tag equipe">EQUIPE</span>
+                    <div class="plan-name">Gestão em Equipe</div>
+                    <div class="plan-price" data-monthly="69" data-annual="699">
+                        <sup>R$</sup><span class="price-value">69</span>
+                    </div>
+                    <div class="plan-period">
+                        <span class="monthly-period">por mês</span>
+                        <span class="annual-period" style="display:none;">por ano (R$ 58,25/mês)</span>
+                    </div>
+                    <div class="payment-methods">
+                        <span class="payment-badge active monthly-payment">💳 Cartão</span>
+                        <span class="payment-badge active annual-payment" style="display:none;">💳 Cartão</span>
+                        <span class="payment-badge active annual-payment" style="display:none;">📄 Boleto</span>
+                        <span class="payment-badge active annual-payment" style="display:none;">💠 <span class="pix-icon">PIX</span></span>
+                    </div>
+                    <p style="margin: 15px 0; color: #666; font-size: 14px;"><strong>Até 3 usuários</strong> | Perfeito para crescer</p>
+                    <ul class="plan-features">
+                        <li><strong>Tudo do plano Solo +</strong></li>
+                        <li>Até 3 usuários simultâneos</li>
+                        <li>Permissões por usuário (admin, gerente, operador)</li>
+                        <li>Relatórios avançados por período</li>
+                        <li>Histórico completo de ações</li>
+                        <li>Dashboard gerencial</li>
+                        <li>Exportação de dados em Excel</li>
+                        <li>Suporte prioritário</li>
+                        <li><strong>Ideal para restaurantes em crescimento</strong></li>
+                    </ul>
+                    
+                    <div class="ai-addon-option">
+                        <label>
+                            <input type="checkbox" class="ai-addon-checkbox" data-plan="equipe" data-price="19.90">
+                            <span class="ai-addon-icon">🤖</span>
+                            <span>Adicionar <strong>Assistente IA</strong> (+R$ 19,90/mês)</span>
+                        </label>
+                    </div>
+                    
+                    <a href="https://www.asaas.com/c/sub_uc6m21gczd13r1yq" class="cta-button plan-cta-equipe" target="_blank">Assinar Agora</a>
+                </div>
+
+                <!-- Plano Empresarial -->
+                <div class="pricing-card">
+                    <span class="plan-tag empresarial">EMPRESARIAL</span>
+                    <div class="plan-name">Múltiplas Lojas</div>
+                    <div class="plan-price" data-monthly="149" data-annual="1499">
+                        <sup>R$</sup><span class="price-value">149</span>
+                    </div>
+                    <div class="plan-period">
+                        <span class="monthly-period">por mês</span>
+                        <span class="annual-period" style="display:none;">por ano (R$ 124,92/mês)</span>
+                    </div>
+                    <div class="payment-methods">
+                        <span class="payment-badge active monthly-payment">💳 Cartão</span>
+                        <span class="payment-badge active annual-payment" style="display:none;">💳 Cartão</span>
+                        <span class="payment-badge active annual-payment" style="display:none;">📄 Boleto</span>
+                        <span class="payment-badge active annual-payment" style="display:none;">💠 <span class="pix-icon">PIX</span></span>
+                    </div>
+                    <p style="margin: 15px 0; color: #666; font-size: 14px;"><strong>Usuários ilimitados</strong> | Escala empresarial</p>
+                    <ul class="plan-features">
+                        <li><strong>Tudo do plano Equipe +</strong></li>
+                        <li>Usuários ilimitados</li>
+                        <li>Multi-tenant (múltiplas lojas/filiais)</li>
+                        <li>Gestão centralizada de todas as unidades</li>
+                        <li>Relatórios consolidados por loja</li>
+                        <li>API para integrações customizadas</li>
+                        <li>Gerente de conta dedicado</li>
+                        <li>Suporte premium 24/7</li>
+                        <li>Treinamento da equipe incluído</li>
+                        <li><strong>Ideal para redes e franquias</strong></li>
+                    </ul>
+                    
+                    <div class="ai-addon-option">
+                        <label>
+                            <input type="checkbox" class="ai-addon-checkbox" data-plan="empresarial" data-price="29.90">
+                            <span class="ai-addon-icon">🤖</span>
+                            <span>Adicionar <strong>Assistente IA</strong> (+R$ 29,90/mês)</span>
+                        </label>
+                    </div>
+                    
+                    <a href="https://www.asaas.com/c/sub_5s2u5j6t6oaqdx5s" class="cta-button plan-cta-empresarial" target="_blank">Assinar Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <h2>Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como funciona a automação do WhatsApp?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Quando você cria um evento, o sistema envia automaticamente uma mensagem para os freelancers disponíveis. Eles clicam em "Confirmar" ou "Recusar" e você recebe a resposta instantaneamente no painel.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>O que é o sistema de Standby?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Como na aviação:</strong> Seu negócio não pode parar! Você combina um percentual (geralmente 10-30% da diária) e o freelancer fica em casa, à disposição para assumir em até 1 hora. Movimento aumentou ou alguém faltou? Aciona com 1 clique!</p>
+                        <p><strong>Fila de Espera:</strong> Pague ainda menos (geralmente 2% da diária) para ter freelancers de backup. Se acionar o standby, o sistema automaticamente promove alguém da fila para standby.</p>
+                        <p><strong>Percentuais configuráveis:</strong> Você escolhe quanto pagar. Sistema controla tudo automaticamente: diárias, sobreaviso, fila. Nada de cálculo manual!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Posso usar em mais de um restaurante?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! O sistema é multi-tenant. Cada restaurante/loja tem sua própria área isolada com freelancers, eventos e relatórios separados.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como é feito o pagamento aos freelancers?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O sistema calcula automaticamente as diárias (ou semanal/quinzenal/período). <strong>Você aprova os pagamentos</strong> e pode executar via integração PIX pelo app ou exportar relatório para pagamento externo.</p>
+                        <p style="margin-top: 10px; color: #666; font-size: 14px;"><em>🔒 Segurança: Todos os pagamentos requerem aprovação do financeiro. Sistema calcula, você decide quando pagar!</em></p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Os relatórios servem para a contabilidade?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! O sistema gera relatórios prontos com: freelancer, função, datas, valores, pagamentos. Seu contador vai adorar. Chega de planilha desorganizada!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>E se o freelancer não aparecer?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O sistema registra faltas e permite avaliações. Você pode promover automaticamente o standby ou chamar o próximo da lista de espera. Tudo com 1 clique!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Posso cancelar a qualquer momento?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim! No plano mensal, você cancela quando quiser e tem acesso até o fim do período pago. No anual, não há reembolso proporcional.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como o sistema calcula diárias, standby e fila de espera?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Totalmente automatizado!</strong> Você define:</p>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li><strong>Diária do freelancer:</strong> Ex: R$ 150</li>
+                            <li><strong>% Standby:</strong> 10-30% (você escolhe) = R$ 15 a R$ 45</li>
+                            <li><strong>% Fila de Espera:</strong> Geralmente 2% = R$ 3</li>
+                        </ul>
+                        <p>O sistema calcula tudo automaticamente. Freelancer faltou? Sistema convoca standby, <strong>registra a diferença da diária para ser pago quando você aprovar</strong>, promove fila para standby e avisa você. Zero trabalho manual!</p>
+                        <p style="margin-top: 10px; background: #E6F8FA; padding: 10px; border-radius: 5px; border-left: 4px solid #62C4CD;">
+                            <strong>🔒 Segurança Financeira:</strong> Todos os pagamentos automáticos só ocorrem com a aprovação do financeiro. O sistema apenas calcula e registra — você mantém o controle total!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como funciona o Assistente IA via WhatsApp?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O Assistente IA permite controlar TODO o sistema conversando no WhatsApp. Use linguagem natural: "Preciso de 2 garçons para sábado", "Quanto gastei esse mês?", "Gera pagamento para João da Silva". O assistente entende, executa e responde. É como ter um colaborador 24/7 que nunca erra!</p>
+                        <p style="margin-top: 10px; color: #666; font-size: 14px;"><em>🔒 Nota: Pagamentos são gerados para aprovação — você mantém o controle financeiro total!</em></p>
+                        <p style="margin-top: 10px;"><strong>Preço por plano:</strong></p>
+                        <ul style="margin: 5px 0; padding-left: 20px;">
+                            <li>Solo: +R$ 9,90/mês</li>
+                            <li>Equipe: +R$ 19,90/mês</li>
+                            <li>Empresarial: +R$ 29,90/mês</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-size: 14px; color: #666;"><em>O valor varia conforme o volume de chamadas de API e número de usuários.</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Saborite Freela - Todos os direitos reservados</p>
+            <p style="margin-top: 10px;">Site desenvolvido pela <a href="https://sucesso.net.br" target="_blank">Agência do Sucesso Empresarial</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Fecha todos os outros
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                
+                // Abre/fecha o clicado
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Toggle Mensal/Anual
+        const toggle = document.getElementById('billing-toggle');
+        const monthlyLabel = document.getElementById('monthly-label');
+        const annualLabel = document.getElementById('annual-label');
+        const priceElements = document.querySelectorAll('.plan-price');
+        const monthlyPeriods = document.querySelectorAll('.monthly-period');
+        const annualPeriods = document.querySelectorAll('.annual-period');
+        const monthlyPayments = document.querySelectorAll('.monthly-payment');
+        const annualPayments = document.querySelectorAll('.annual-payment');
+        let isAnnual = true;
+
+        // URLs dos planos
+        const planUrls = {
+            solo: {
+                monthly: 'https://www.asaas.com/c/sub_54gmjdyrualaq6mo',
+                annual: 'https://www.asaas.com/c/sub_2groe4hfqsne5y56'
+            },
+            equipe: {
+                monthly: 'https://www.asaas.com/c/sub_mb3cj9wm1miox3au',
+                annual: 'https://www.asaas.com/c/sub_uc6m21gczd13r1yq'
+            },
+            empresarial: {
+                monthly: 'https://www.asaas.com/c/sub_099h8sscwkur1f2h',
+                annual: 'https://www.asaas.com/c/sub_5s2u5j6t6oaqdx5s'
+            }
+        };
+
+        // Inicializa com valores anuais
+        priceElements.forEach(el => {
+            const annual = el.dataset.annual;
+            el.querySelector('.price-value').textContent = annual;
+        });
+        monthlyPeriods.forEach(el => el.style.display = 'none');
+        annualPeriods.forEach(el => el.style.display = 'block');
+        monthlyPayments.forEach(el => el.style.display = 'none');
+        annualPayments.forEach(el => el.style.display = 'inline-flex');
+
+        toggle.addEventListener('click', () => {
+            isAnnual = !isAnnual;
+            toggle.classList.toggle('active');
+            
+            if (isAnnual) {
+                monthlyLabel.classList.remove('active');
+                annualLabel.classList.add('active');
+                
+                // Atualiza preços
+                priceElements.forEach(el => {
+                    const annual = el.dataset.annual;
+                    el.querySelector('.price-value').textContent = annual;
+                });
+                
+                // Atualiza períodos
+                monthlyPeriods.forEach(el => el.style.display = 'none');
+                annualPeriods.forEach(el => el.style.display = 'block');
+                
+                // Atualiza badges de pagamento
+                monthlyPayments.forEach(el => el.style.display = 'none');
+                annualPayments.forEach(el => el.style.display = 'inline-flex');
+                
+                // Atualiza links dos botões
+                document.querySelector('.plan-cta-solo').href = planUrls.solo.annual;
+                document.querySelector('.plan-cta-equipe').href = planUrls.equipe.annual;
+                document.querySelector('.plan-cta-empresarial').href = planUrls.empresarial.annual;
+            } else {
+                monthlyLabel.classList.add('active');
+                annualLabel.classList.remove('active');
+                
+                // Atualiza preços
+                priceElements.forEach(el => {
+                    const monthly = el.dataset.monthly;
+                    el.querySelector('.price-value').textContent = monthly;
+                });
+                
+                // Atualiza períodos
+                monthlyPeriods.forEach(el => el.style.display = 'block');
+                annualPeriods.forEach(el => el.style.display = 'none');
+                
+                // Atualiza badges de pagamento
+                monthlyPayments.forEach(el => el.style.display = 'inline-flex');
+                annualPayments.forEach(el => el.style.display = 'none');
+                
+                // Atualiza links dos botões
+                document.querySelector('.plan-cta-solo').href = planUrls.solo.monthly;
+                document.querySelector('.plan-cta-equipe').href = planUrls.equipe.monthly;
+                document.querySelector('.plan-cta-empresarial').href = planUrls.empresarial.monthly;
+            }
+        });
+
+        // Checkbox do Assistente IA
+        document.querySelectorAll('.ai-addon-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('change', (e) => {
+                const plan = e.target.dataset.plan;
+                const price = e.target.dataset.price;
+                const button = document.querySelector(`.plan-cta-${plan}`);
+                const originalHref = button.href.split('?text=')[0];
+                
+                if (e.target.checked) {
+                    const planName = plan === 'solo' ? 'SOLO' : plan === 'equipe' ? 'EQUIPE' : 'EMPRESARIAL';
+                    const billingType = isAnnual ? 'ANUAL' : 'MENSAL';
+                    button.href = originalHref + `?text=Olá!%20Quero%20assinar%20o%20plano%20${planName}%20${billingType}%20+%20ASSISTENTE%20IA%20via%20WhatsApp%20(+R$${price}/mês)`;
+                } else {
+                    const planName = plan === 'solo' ? 'SOLO' : plan === 'equipe' ? 'EQUIPE' : 'EMPRESARIAL';
+                    const billingType = isAnnual ? 'ANUAL' : 'MENSAL';
+                    button.href = originalHref + `?text=Olá!%20Quero%20assinar%20o%20plano%20${planName}%20${billingType}%20do%20Saborite%20Freela`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saborite - Sistema de Gestão de Pedidos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-orange { background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <nav class="bg-white shadow-sm py-4 px-6 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="text-2xl font-bold text-orange-500">
+                <i class="fas fa-utensils"></i> Saborite
+            </div>
+            <div class="hidden md:flex gap-6">
+                <a href="#recursos" class="hover:text-orange-500 transition">Recursos</a>
+                <a href="#planos" class="hover:text-orange-500 transition">Planos</a>
+                <a href="#contato" class="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="gradient-orange text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-black mb-6">
+                Sistema de Gestão de Pedidos
+            </h1>
+            <p class="text-2xl mb-12 opacity-90">
+                Maior controle sobre a gestão dos pedidos, aumento das vendas e fidelização dos clientes
+            </p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <div>
+                    <div class="text-5xl font-black mb-2">+1Bi</div>
+                    <div class="text-sm opacity-90">em receita total gerada</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-black mb-2">+23M</div>
+                    <div class="text-sm opacity-90">de pedidos recebidos</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-black mb-2">+3K</div>
+                    <div class="text-sm opacity-90">lojas aumentaram faturamento</div>
+                </div>
+                <div>
+                    <div class="text-5xl font-black mb-2">+100</div>
+                    <div class="text-sm opacity-90">parceiros em todo o Brasil</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recursos -->
+    <section id="recursos" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4">Nossos Recursos</h2>
+            <p class="text-xl text-gray-600 text-center mb-16">Funcionalidades exclusivas do nosso sistema</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="text-3xl mb-4">📱</div>
+                    <h3 class="font-bold text-xl mb-2">Cardápio Digital</h3>
+                    <p class="text-gray-600">Site e aplicativo para o seu cliente realizar pedidos de forma rápida, prática e intuitiva.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="text-3xl mb-4">💬</div>
+                    <h3 class="font-bold text-xl mb-2">WhatsApp Integrado</h3>
+                    <p class="text-gray-600">Notifique direto no WhatsApp do cliente os status do pedido e envio de disparo de mensagem em massa.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="text-3xl mb-4">🤖</div>
+                    <h3 class="font-bold text-xl mb-2">Robô de Atendimento IA</h3>
+                    <p class="text-gray-600">Resposta instantânea às perguntas do cliente através da voz.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="text-3xl mb-4">🍔</div>
+                    <h3 class="font-bold text-xl mb-2">Integração iFood</h3>
+                    <p class="text-gray-600">Concentre todos os pedidos das suas lojas do iFood em nossa plataforma.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="text-3xl mb-4">💳</div>
+                    <h3 class="font-bold text-xl mb-2">Ponto de Venda</h3>
+                    <p class="text-gray-600">Registre os pedidos recebidos via telefone e balcão de forma rápida.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="text-3xl mb-4">🪑</div>
+                    <h3 class="font-bold text-xl mb-2">Controle de Mesa</h3>
+                    <p class="text-gray-600">Lance os itens na mesa em consumo e a impressão da conta ao final.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="text-3xl mb-4">🎁</div>
+                    <h3 class="font-bold text-xl mb-2">Programa de Fidelidade</h3>
+                    <p class="text-gray-600">Ofereça recompensa ao atingir uma quantidade de pedidos.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="text-3xl mb-4">💰</div>
+                    <h3 class="font-bold text-xl mb-2">Cashback</h3>
+                    <p class="text-gray-600">Parte do valor gasto retorna para a carteira virtual do cliente.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="text-3xl mb-4">📄</div>
+                    <h3 class="font-bold text-xl mb-2">Emissão Fiscal NFC-e</h3>
+                    <p class="text-gray-600">Emita cupom fiscal das vendas de forma prática.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="py-20 px-6 bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4">Nossos Planos</h2>
+            <div class="text-center mb-12">
+                <p class="text-green-600 font-semibold">🔹 Sem taxa de implantação 🔹 Sem tempo mínimo de contrato</p>
+                <p class="text-green-600 font-semibold">🔹 Sem multa por cancelamento 🔹 Não é necessário cartão de crédito</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Básico -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-2">Básico</h3>
+                    <div class="text-4xl font-bold text-orange-500 mb-4">R$ 159,90<span class="text-lg text-gray-600">/mês</span></div>
+                    <p class="text-gray-600 mb-6">"Solução econômica para começar a vender online"</p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Cardápio digital</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Ponto de venda</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Integração iFood</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Pix instantâneo</span>
+                        </div>
+                    </div>
+                    <a href="#contato" class="block w-full bg-orange-500 text-white text-center py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+                        Assinar Agora
+                    </a>
+                </div>
+
+                <!-- Essencial -->
+                <div class="bg-white rounded-2xl p-8 shadow-2xl border-4 border-orange-500 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-bold">
+                        MAIS POPULAR
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Essencial</h3>
+                    <div class="text-4xl font-bold text-orange-500 mb-4">R$ 229,90<span class="text-lg text-gray-600">/mês</span></div>
+                    <p class="text-gray-600 mb-6">"Ideal para otimizar as operações do seu negócio"</p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Tudo do Básico +</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Controle de mesa</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>App do entregador</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>App de garçom</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Programa fidelidade</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Cashback</span>
+                        </div>
+                    </div>
+                    <a href="#contato" class="block w-full bg-orange-500 text-white text-center py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+                        Assinar Agora
+                    </a>
+                </div>
+
+                <!-- Profissional -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-2">Profissional</h3>
+                    <div class="text-4xl font-bold text-orange-500 mb-4">R$ 299,92<span class="text-lg text-gray-600">/mês</span></div>
+                    <p class="text-gray-600 mb-6">"Recursos avançados para conquistar mais clientes"</p>
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Tudo do Essencial +</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Monitor de KDS</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Monitor de senha</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Monitor entregas</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Robô de atendimento IA</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Campanhas WhatsApp</span>
+                        </div>
+                        <div class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                            <span>Domínio próprio incluído</span>
+                        </div>
+                    </div>
+                    <a href="#contato" class="block w-full bg-orange-500 text-white text-center py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+                        Assinar Agora
+                    </a>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center bg-green-100 border-2 border-green-500 rounded-xl p-6">
+                <h3 class="text-2xl font-bold mb-2">💚 Satisfação total ou seu dinheiro de volta</h3>
+                <p class="text-gray-700">
+                    Se em até 7 dias após a contratação você achar que o nosso sistema não atendeu o seu negócio, devolvemos 100% do valor pago sem burocracias.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-20 px-6 gradient-orange text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Fale Conosco</h2>
+            <p class="text-xl mb-10">Disponível todos os dias das 09h às 00h</p>
+            <a href="https://wa.me/5527920000166?text=Olá!%20Quero%20conhecer%20o%20Saborite" 
+               target="_blank"
+               class="inline-flex items-center gap-3 bg-white text-orange-500 px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                Solicitar Demonstração
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-400">© 2026 Saborite - Sistema de Gestão de Pedidos</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/5527920000166?text=Olá!%20Quero%20conhecer%20o%20Saborite" 
+       target="_blank"
+       class="fixed bottom-6 right-6 bg-green-500 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform z-50">
+        <i class="fab fa-whatsapp text-3xl text-white"></i>
+    </a>
+</body>
+</html>
